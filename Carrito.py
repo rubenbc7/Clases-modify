@@ -85,3 +85,7 @@ class Carrito:
             self.colisionando = True
         else:
             self.colisionando = False
+
+        if self.disparando and obstaculo.Vivo and bala.posicionX + 0.01 > obstaculo.PosicionX - 0.15 and bala.posicionX - 0.01 < obstaculo.PosicionX + 0.15 and bala.posicionY + 0.01 > obstaculo.PosicionY - 0.15 and bala.posicionY - 0.01 < obstaculo.PosicionY + 0.15:
+            obstaculo.Vivo = False
+            self.disparando = False
